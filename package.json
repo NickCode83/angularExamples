@@ -1,0 +1,23 @@
+{
+  "name": "angularexpamles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickCode83/angularExamples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickCode83/angularExamples/issues"
+  },
+  "homepage": "https://github.com/NickCode83/angularExamples#readme"
+}

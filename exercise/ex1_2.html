@@ -1,0 +1,13 @@
+<html ng-app="myApp">
+    <head>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="../scripts/ex1_2/controllers.js"></script>
+    </head>
+
+    <body>
+        <div ng-controller="HelloController">
+            <input ng-model="greeting.text">
+            <p>{{greeting.text}}, World!</p>
+        </div>
+    </body>
+</html>
