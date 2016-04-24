@@ -1,0 +1,24 @@
+<!-- 这是对ex2_2的完善版本,之前的因为watch而消耗了太多的性能 -->
+<html ng-app="myApp" >
+<head>
+    <meta charset="utf-8">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../scripts/ex2_2/controllers.js"></script>
+</head>
+
+<body>
+<div ng-controller="CartController">
+    <h1>您的购物车</h1>
+    <div ng-repeat="item in items">
+        <span>{{item.title}}</span>
+        <input ng-model="item.quantity">
+        <span>{{item.price | currency}}</span>
+        <span>{{item.price * item.quantity | currency}}</span>
+        <button ng-click="remove($index)">Remove</button>
+    </div>
+    <div>Total:{{ bill.total | currency}}</div>
+    <div>Discount: {{bill.discount | currency}}</div>
+    <div>Subtotal: {{bill.subtotal | currency}}</div>
+</div>
+</body>
+</html>

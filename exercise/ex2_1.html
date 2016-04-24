@@ -1,0 +1,24 @@
+<!-- 在ex1_3的基础上,本实例进行了扩展,增加了显示商品总价,折扣和折扣后总价的功能,其中不同的总价对应的折扣是不同的,主要通过$watch函数实现了折扣根据总价自动调整的功能 -->
+<html ng-app="myApp" >
+<head>
+    <meta charset="utf-8">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../scripts/ex2_1/controllers.js"></script>
+</head>
+
+<body>
+<div ng-controller="CartController">
+    <h1>您的购物车</h1>
+    <div ng-repeat="item in items">
+        <span>{{item.title}}</span>
+        <input ng-model="item.quantity">
+        <span>{{item.price | currency}}</span>
+        <span>{{item.price * item.quantity | currency}}</span>
+        <button ng-click="remove($index)">Remove</button>
+    </div>
+    <div>Total:{{ totalCart() | currency}}</div>
+    <div>Discount: {{bill.discount | currency}}</div>
+    <div>Subtotal: {{subTotal() | currency}}</div>
+</div>
+</body>
+</html>
